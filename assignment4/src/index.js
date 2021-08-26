@@ -13,20 +13,20 @@ const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
 ✅ ALL function handlers should be INSIDE of "superEventHandler"
 */
 
-const superEventHandler = {  
-  mouseUp : function(){
+const superEventHandler = {
+  mouseEnter: function () {
     title.innerText = "The mouse is here!";
     title.style.color = colors[0];
   },
-  mouseLeave : function(){
+  mouseLeave: function () {
     title.innerText = "The mouse is gone!";
     title.style.color = colors[1];
   },
-  contextMenu : function(){
+  contextMenu: function () {
     title.innerText = "That was a right click!";
     title.style.color = colors[4];
   },
-  resize : function(){
+  resize: function () {
     title.innerText = "You just resized!";
     title.style.color = colors[2];
   }
@@ -34,7 +34,7 @@ const superEventHandler = {
 
 const title = document.querySelector("h2");
 
-title.addEventListener("mouseenter", superEventHandler.mouseUp);
+title.addEventListener("mouseenter", superEventHandler.mouseEnter);
 title.addEventListener("mouseleave", superEventHandler.mouseLeave);
 window.addEventListener("contextmenu", superEventHandler.contextMenu);
 window.addEventListener("resize", superEventHandler.resize);
