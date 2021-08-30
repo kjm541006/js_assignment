@@ -2,6 +2,7 @@ const randomNumInput = document.querySelector("h2 input");
 const guessNumInput = document.querySelector("h3 input");
 const form = document.querySelector("#form");
 const div = document.querySelector("div");
+let randomNum;
 
 const h3 = document.createElement("h3");
 const h2 = document.createElement("h2");
@@ -25,8 +26,6 @@ function checkRandomNum() {
 function play(event) {
   event.preventDefault();
   createRandomNum(randomNumInput.value);
-  console.log(randomNum);
-  console.log(guessNumInput.value);
   checkRandomNum(guessNumInput.value);
 }
 
